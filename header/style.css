@@ -1,0 +1,127 @@
+
+body {
+    font-family: 'A1 Gothic R', 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    margin:30,60,0;
+    z-index: 1000;
+    border: none;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px 0;
+}
+
+.header__logo img {
+    height: 50px;
+}
+.header__nav {
+    flex-grow: 1;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.header__nav-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap; 
+    gap: 10px;
+}
+
+.header__nav-list li {
+    margin-right: 30px;
+}
+
+.header__nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 12px 8px;
+    white-space: nowrap; 
+    transition: color 0.3s ease-in-out;
+}
+
+.header__nav-list a:hover {
+    color: #0073e6;
+}
+
+.header__buttons {
+    display: flex;
+    
+    align-items: center;
+}
+
+.header__btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f85d62;
+    padding: 3px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    white-space: nowrap;
+    transition:  background-color 0.3s, color 0.3s;
+    font-size:13px
+}
+
+.header__btn--green {
+    background-color: #00ab8d;
+    color: #fff;
+    padding: 3px 15px;
+}
+
+.header__btn:hover {
+    background-color:#b84448;
+    color: #fff;
+}
+
+.header__btn--green:hover {
+    background-color: #159079;
+}
+
+
+.header__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.header__hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s ease-in-out,  0.3s ease-in-out;
+}
+
+.header__hamburger.open span:nth-child(1) { 
+    transform: translateY(9px) rotate(45deg);
+}
+
+.header__hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
