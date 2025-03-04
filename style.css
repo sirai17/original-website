@@ -1157,8 +1157,8 @@ body {
 
 
     .mv-us{
-        height:1000px;
-        padding: 250px 0 62px;
+        height:840px;
+        padding: 200px 0 62px;
     }
         .concept{
             position: relative;
@@ -1172,28 +1172,28 @@ body {
             left: 0;
             z-index: 2;
         }
-        .mv-em{
+        .mv-en{
             position: absolute;
             left: 40px;
-            top: 30px;
+            top: -10px;
         }
         #movie-img{
-            width: 155px;
+            width: 100%;
             height: 36px;
             position: absolute;
         }
         .mv-sub{
             position: absolute;
-            display: block;
+            display: flex;
             width: 100px;
             left: 124px;
-            top: -3px;
+            top: -20px;
             font-family: 'brandon-grotesque', sans-serif;
             font-weight: 700;
             font-style: normal;
             letter-spacing: 0.05em;
             font-style: italic;
-            font-size: .8em;
+            font-size: .1em;
         }
         #about-img{
             width: 26px;
@@ -1205,7 +1205,7 @@ body {
         .ja-typesquare-option{
             position: absolute;
             left: -30px;
-            top: -15px;
+            top: 10px;
             display: inline-block;
             text-align: left;
             -webkit-writing-mode: vertical-rl;
@@ -1215,23 +1215,86 @@ body {
             font-family: 'brandon-grotesque', 'A1ゴシック M', 'A1 Gothic M', sans-serif;
             font-style: normal;
             font-weight: 700;
-            font-size: 1.4em;
+            font-size: 0.8em;
         }
         .combine-typesquare-option{
             text-combine-upright: all;
             -webkit-text-combine: horizontal;
         }
-
-
-
-
-
-
+        .comment{
+            position: absolute;
+            left: -140px;
+            top: 430px;
+            z-index: 2;
+            display: inline-block;
+            text-align: left;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            white-space: nowrap;
+            font-family: 'futura-pt-condensed', sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1em;
+            height: 473px;
+            transform: rotate(-105deg);
+        }
+        .comment::after{
+            content: '';
+            display: block;
+            width: 12px;
+            background: url(./asseets/img/img/arr2_down.svg) no-repeat center bottom / 12px;
+            left:45%;
+            margin-left: -6px;
+            height: 375px;
+            position: absolute;
+            bottom:0;
+        }
+        #btn-play{
+            position: relative;
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        #btn-play::before{
+            content: '';
+            position: absolute;
+            z-index: 3;
+            width: 55px;
+            height: 55px;
+            left: 50%;
+            top: 50%;
+            margin: -27px 0 0 -27px;
+            background: url(./asseets/img/img/arr3.svg) no-repeat 0 0 / 55px;
+        }
+        #btn-img{
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            transition-duration: .25s;
+        }
+        .time-mv{
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            bottom: 0;
+            background: #00ab8d;
+            color: #fff;
+            width: 50px;
+            height: 25px;
+            font-family: 'futura-pt-condensed', sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.2em;
+            line-height: 25px;
+            text-align: center;
+        }
 
 
     #footer {
         position: relative;
-        margin-top: 40px;
+        margin-top: 150px;
         color: #fff;
     }
     #footer a {
