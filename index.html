@@ -19,33 +19,71 @@
         />
     </head>
     <body>
-        <header class="header">
+        <header  id="header" class="header">
             <div class="header__inner">
-                <h1 class="header__logo">
-                    <a href="/">
-                        <img src="" alt="" />
-                    </a>
-                </h1>
+                <a href="/">
+                    <img
+                        class="header-logo"
+                        src="./asseets/img/img/header logo.png"
+                        alt="header logo"
+                    />
+                </a>
+
                 <nav class="header__nav">
                     <ul class="header__nav-list">
-                        <li><a href="/about/">西東京留学同とは</a></li>
-                        <li><a href="/outline/">団体概要</a></li>
-                        <li><a href="/activity/">活動紹介</a></li>
-                        <li><a href="/recruit/">採用</a></li>
-                        <li><a href="/contact/">お問い合わせ</a></li>
+                        <li><a href=#about>留学同西東京とは</a></li>
+                        <li><a href=#about>団体概要</a></li>
+                        <li><a href=#history>沿革</a></li>
+                        <li><a href=#active>活動紹介</a></li>
+                        <li><a href=#sns>お問い合わせ</a></li>
                     </ul>
                 </nav>
+
                 <div class="header__buttons">
-                    <a href="/support/" class="header__btn header__btn--green"
-                        >> サポートを受ける</a
+                    <a href=#news class="header__btn header__btn--green"
+                        >> Newsを見る</a
                     >
-                    <a href="/donate/" class="header__btn">> 寄付で応援</a>
+                    <a href=#event class="header__btn">> イベントに参加</a>
                 </div>
-                <button class="header__hamburger" aria-label="メニュー">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button
+                    class="hamburger-overlay"
+                    aria-label="メニュー"
+                    aria-controls="overlay-menu"
+                    aria-expanded="false"
+                >
+                    <span class="hamburger-overlay__line"></span>
+                    <span class="hamburger-overlay__line"></span>
+                    <span class="hamburger-overlay__line"></span>
                 </button>
+
+                <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+                    <div class="nav-overlay__content">
+                        <ul class="nav-overlay__list">
+                            <li class="nav-overlay__item">
+                                <a href="#about" class="nav-overlay__link">留学同西東京とは
+                                </a>
+                            </li>
+                            <li class="nav-overlay__item">
+                                <a href="#about" class="nav-overlay__link"
+                                    >団体概要</a
+                                >
+                            </li>
+                            <li class="nav-overlay__item">
+                                <a href="#history" class="nav-overlay__link">沿革</a>
+                            </li>
+                            <li class="nav-overlay__item">
+                                <a href="#acitive" class="nav-overlay__link"
+                                    >活動</a
+                                >
+                            </li>
+                            <li class="nav-overlay__item">
+                                <a href="#sns" class="nav-overlay__link"
+                                    >お問い合わせ</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </header>
 
@@ -53,28 +91,62 @@
             <section id="catchCopy">
                 <div class="diagonal"></div>
                 <div class="cover">
-                    <img class="pic1" src="./main_img.jpg" alt="表紙" />
+                    <img class="pic1" src="./asseets/img/img/mostmain-img02.png" alt="表紙" />
+                    <img
+                    />
+                    <img class="main-logo" src="./asseets/img/img/main logo.png" alt="">
                 </div>
                 <div>
                     <ul class="social-icons-container">
-                        <li class="social-icons">
-                            <a href=""
-                                ><i class="fa-brands fa-x-twitter fa-2x"></i
-                            ></a>
+                        <li class="sns-content-inside">
+                            <a
+                                href="https://x.com/rhtnishitokyo"
+                                target="_blank"
+                                rel="noopener"
+                                class="sns-link-detail"
+                                id="x"
+                                ></a
+                            >
                         </li>
-                        <li class="social-icons">
-                            <a href=""
-                                ><i class="fa-brands fa-facebook fa-2x"></i
-                            ></a>
+                        <li class="sns-content-inside">
+                            <a
+                                href="https://www.facebook.com/share/1XpLwkHEA5/?mibextid=wwXIfr"
+                                target="_blank"
+                                rel="noopener"
+                                class="sns-link-detail"
+                                id="fb"
+                                ></a
+                            >
                         </li>
-                        <li class="social-icons">
-                            <a href=""
-                                ><i class="fa-brands fa-instagram fa-2x"></i
-                            ></a>
+                        <li class="sns-content-inside">
+                            <a
+                                href="https://www.instagram.com/rht_nishitokyo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank"
+                                rel="noopener"
+                                class="sns-link-detail"
+                                id="ist"
+                                ></a
+                            >
                         </li>
-                        <li class="social-icons">
-                            <a href=""></a
-                            ><i class="fa-brands fa-line fa-2x"></i>
+                        <li class="sns-content-inside">
+                            <a
+                                href="https://www.ameba.jp/profile/general/rht-nishitokyo0914/"
+                                target="_blank"
+                                rel="noopener"
+                                class="sns-link-detail"
+                                id="amb"
+                                ></a
+                            >
+                        </li>
+                        <li class="sns-content-inside">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener"
+                                class="sns-link-detail"
+                                id="mail"
+                                ></a
+                            >
                         </li>
                     </ul>
                 </div>
@@ -95,28 +167,68 @@
                             alt="スティック"
                         />
                     </div>
-                    <img src="" alt="" />
+                    <img class="main-text-img" src="./asseets/img/img/main.text.jpg" alt="" />
                     <div class="p-about-us">
                         <p class="about-us_text">
-                            たくさんのものを失った被災地の子も、
-                            <br />貧しい家庭環境で夢を諦めた子も、
-                            <br />日々ただぼんやりと過ごす子も
-                            <br />どんな環境に生まれ育ても全ての10台が
-                            <br />未来を作り出す意欲と創造性を育てる
-                            <br />そんな未来を当たり前を目指して
-                            <br />2000から活動しています
+                            朝鮮学校で民族教育を学んだ子も、
+                            <br />日本の学校で教養を学んだ子も、
+                            <br />異国の地で生まれ育ちながら
+                            <br />在日朝鮮人としてのルーツを
+                            <br />供に語り、学びあっていく。
+                            <br />そんなウリ学生の居場所になるため、
+                            <br />西東京留学同は活動しています。
                         </p>
                     </div>
-                    <img src="./main_img.jpg" alt="" class="img img1" />
-                    <img src="./main_img.jpg" alt="" class="img img2" />
-                    <img src="./main_img.jpg" alt="" class="img img3" />
-                    <img src="./main_img.jpg" alt="" class="img img4" />
-                    <img src="./main_img.jpg" alt="" class="img img5" />
-                    <img src="./main_img.jpg" alt="" class="img img6" />
-                    <img src="./main_img.jpg" alt="" class="img img7" />
-                    <img src="./main_img.jpg" alt="" class="img img8" />
-                    <img src="./main_img.jpg" alt="" class="img img9" />
-                    <img src="./main_img.jpg" alt="" class="img img10" />
+                    <img
+                        src="./asseets/img/img/mini1.jpg"
+                        alt=""
+                        class="img img1"
+                    />
+                    <img
+                        src="./asseets/img/img/mini2.jpg"
+                        alt=""
+                        class="img img2"
+                    />
+                    <img
+                        src="./asseets/img/img/mini3.jpg"
+                        alt=""
+                        class="img img3"
+                    />
+                    <img
+                        src="./asseets/img/img/mini4.jpg"
+                        alt=""
+                        class="img img4"
+                    />
+                    <img
+                        src="./asseets/img/img/mini5.jpg"
+                        alt=""
+                        class="img img5"
+                    />
+                    <img
+                        src="./asseets/img/img/mini6.jpg"
+                        alt=""
+                        class="img img6"
+                    />
+                    <img
+                        src="./asseets/img/img/mini7.jpg"
+                        alt=""
+                        class="img img7"
+                    />
+                    <img
+                        src="./asseets/img/img/mini8.jpg"
+                        alt=""
+                        class="img img8"
+                    />
+                    <img
+                        src="./asseets/img/img/mini9.jpg"
+                        alt=""
+                        class="img img9"
+                    />
+                    <img
+                        src="./asseets/img/img/mini10.jpg"
+                        alt=""
+                        class="img img10"
+                    />
 
                     <div class="text-box">
                         <div class="title-box">
@@ -131,14 +243,12 @@
                         </div>
 
                         <div class="inform-box">
-                            <p class="inform">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Odio rerum possimus nisi
-                                magnam eligendi reprehenderit unde molestiae
-                                officia eveniet. Tempore quae debitis facilis
-                                molestias doloremque assumenda expedita iste
-                                beatae aspernatur!
-                            </p>
+                            
+                            留学同西東京は、東京23区外の多摩地域、また山梨県の大学・短大・専門学校に通う
+                            在日朝鮮人学生の団体です。
+                            <br>在日朝鮮人学生が出会い集まり、語り、学びあいながら
+                            <br>自分のルーツを知り考えていくことを目的としています。
+                            
 
                             <div class="link-box">
                                 <a class="link" href="link">
@@ -169,9 +279,17 @@
             <section3 id="history">
                 <div class="history-us">
                     <div class="diagonal-history"></div>
-                    <h1 class="history-logo">
-                        <img src="" alt="" />
-                    </h1>
+                    <img
+                        class="film-top"
+                        src="./asseets/img/img/firm-his.png"
+                        alt="firm-top"
+                    />
+                    <img
+                        class="history-logo"
+                        src="./asseets/img/img/history.png"
+                        alt=""
+                    />
+
                     <p class="history-logo-text">
                         <br />
                     </p>
@@ -181,11 +299,13 @@
                                 id="history-slider"
                                 class="history-body-slider-list"
                             >
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top-1"
-                                    >
-                                        <div class="p-outline-history-inner">
+                                <section>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-top-1"
+                                        >
+                                            Year
+                                            <!-- <div class="p-outline-history-inner">
                                             <figure class="blockimage-his">
                                                 <img
                                                     src="./main_img.jpg"
@@ -202,283 +322,242 @@
                                                     >平成〇年△月</time
                                                 >
                                             </div>
+                                        </div> -->
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">1000</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
+                                    </li>
+                                    <!-- blackball -->
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-top"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner"
+                                            >
+                                                <figure
+                                                    class="blockimage-his-top"
                                                 >
-                                            </div>
-                                            <h4 class="title-his">
-                                                留学同西東京設立
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">1100</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
-                                            </div>
-                                            <h4 class="title-his">
-                                                ハングル活動開始
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    alt=""
-                                                    class=""
-                                                />
-                                            </figure>
-                                            <h4 class="title-his">
-                                                在日発掘作業開始
-                                            </h4>
-                                            <div class="info-his">
-                                                <span class="year">1200</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his01.jpg"
+                                                        alt=""
+                                                        class=""
+                                                    />
+                                                </figure>
+                                                <h4 class="title-his-top">
+                                                    祖国解放
+                                                </h4>
+                                                <div class="info-his-top">
+                                                    <span class="year"
+                                                        >1945</span
+                                                    >
+                                                    <time class="time"
+                                                        >8月15日</time
+                                                    >
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">1400</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
+                                    </li>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-bottom"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner"
+                                            >
+                                                <p class="dot-his-bottom">
+                                                    <br
+                                                        id="dot-red-his-bottom"
+                                                    />・ <br />・ <br />・
+                                                    <br />・ <br />・
+                                                </p>
+                                                <div class="info-his-bottom">
+                                                    <span class="year"
+                                                        >1945</span
+                                                    >
+                                                    <time class="time"
+                                                        >9月14日</time
+                                                    >
+                                                </div>
+                                                <h4 class="title-his-bottom">
+                                                    在日本朝鮮学生同盟（朝学同）結成
+                                                </h4>
+                                                <figure
+                                                    class="blockimage-his-bottom"
                                                 >
-                                            </div>
-                                            <h4 class="title-his">
-                                                事務所移転
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                            <h4 class="title-his">
-                                                西東京学校と協力開始
-                                            </h4>
-                                            <div class="info-his">
-                                                <span class="year">1500</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his02.jpg"
+                                                        class="isloaded"
+                                                        alt="history01"
+                                                    />
+                                                </figure>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">1600</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
+                                    </li>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-top"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner"
+                                            >
+                                                <figure
+                                                    class="blockimage-his-top"
                                                 >
-                                            </div>
-                                            <h4 class="title-his">
-                                                朝鮮人デモ参加
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                            <h4 class="title-his">
-                                                初の留学同祖国訪問
-                                            </h4>
-                                            <div class="info-his">
-                                                <span class="year">1700</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his03.jpg"
+                                                        alt=""
+                                                        class=""
+                                                    />
+                                                </figure>
+                                                <h4 class="title-his-top">
+                                                    在日本朝鮮人連盟（朝連）
+                                                </h4>
+                                                <div class="info-his-top">
+                                                    <span class="year"
+                                                        >1945</span
+                                                    >
+                                                    <time class="time"
+                                                        >10年15月</time
+                                                    >
+                                                </div>
+                                                <p class="dot-his">
+                                                    ・ <br />・ <br />・
+                                                    <br />・
+                                                    <br id="dot-red-his" />・
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">1800</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
+                                    </li> 
+                                </section>
+                                <section>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-bottom"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner"
+                                            >
+                                                <p class="dot-his-bottom">
+                                                    <br
+                                                        id="dot-red-his-bottom"
+                                                    />・ <br />・ <br />・
+                                                    <br />・ <br />・
+                                                </p>
+                                                <div class="info-his-bottom">
+                                                    <span class="year"
+                                                        >1955</span
+                                                    >
+                                                    <time class="time"
+                                                        >5月25月</time
+                                                    >
+                                                </div>
+                                                <h4 class="title-his-bottom">
+                                                    在日本朝鮮人総聯合会（総聯）結成
+                                                </h4>
+                                                <figure
+                                                    class="blockimage-his-bottom"
                                                 >
-                                            </div>
-                                            <h4 class="title-his">
-                                                韓国人留学生同盟との共同イベント
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                            <h4 class="title-his">
-                                                全国イベント開催
-                                            </h4>
-                                            <div class="info-his">
-                                                <span class="year">1900</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his04.jpg"
+                                                        class="isloaded"
+                                                        alt="history01"
+                                                    />
+                                                </figure>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-bottom"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <div class="info-his">
-                                                <span class="year">2000</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
+                                    </li>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-top"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner"id="p-outline-history-inner05"
+                                            >
+                                                <figure
+                                                    class="blockimage-his-top"
                                                 >
-                                            </div>
-                                            <h4 class="title-his">
-                                                留学同西東京独自でインタビュー開始
-                                            </h4>
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-outline-history">
-                                    <div
-                                        class="p-outline-history-item-container-top"
-                                    >
-                                        <div class="p-outline-history-inner">
-                                            <figure class="blockimage-his">
-                                                <img
-                                                    src="./main_img.jpg"
-                                                    class="isloaded"
-                                                    alt="history01"
-                                                />
-                                            </figure>
-                                            <h4 class="title-his">
-                                                アフタースクール事業開始
-                                            </h4>
-                                            <div class="info-his">
-                                                <span class="year">2025</span>
-                                                <time class="time"
-                                                    >平成〇年△月</time
-                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his05.jpg"
+                                                        class="isloaded"
+                                                        alt="history01"
+                                                    />
+                                                </figure>
+                                                <h4 class="title-his-top" id="title-his-top05">
+                                                    朝学同を在日本朝鮮留学生同盟（留学同）と改称、総聯の傘下に
+                                                    
+                                                </h4>
+                                                <div class="info-his-top">
+                                                    <span class="year"
+                                                        >1955</span
+                                                    >
+                                                    <time class="time"
+                                                        >6月18日</time
+                                                    >
+                                                </div>
+                                                <p class="dot-his">
+                                                    ・ <br />・ <br />・
+                                                    <br />・
+                                                    <br id="dot-red-his" />・
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                    <li class="p-outline-history">
+                                        <div
+                                            class="p-outline-history-item-container-bottom"
+                                        >
+                                            <div
+                                                class="p-outline-history-inner" 
+                                            >
+                                                <p class="dot-his-bottom">
+                                                    <br
+                                                        id="dot-red-his-bottom"
+                                                    />・ <br />・ <br />・
+                                                    <br />・ <br />・
+                                                </p>
+                                                <div class="info-his-bottom">
+                                                    <span class="year"
+                                                        >1995</span
+                                                    >
+                                                    <time class="time"
+                                                        >5月14日</time
+                                                    >
+                                                </div>
+                                                <h4 class="title-his-bottom" id="title-his-bottom06">
+                                                    留学同
+                                                    <br>西東京本部結成
+                                                </h4>
+                                                <figure
+                                                    class="blockimage-his-bottom"
+                                                >
+                                                    <img
+                                                        src="./asseets/img/img/his06.jpg"
+                                                        class="isloaded"
+                                                        alt="history01"
+                                                    />
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </section>
                             </ul>
                         </div>
                     </div>
-
+                    <img
+                        class="film-bottom"
+                        src="./asseets/img/img/firm-his.png"
+                        alt=""
+                    />
                     <div class="diagonal-history"></div>
                 </div>
             </section3>
 
             <section4 id="active">
                 <div class="active-us">
+                    <img
+                        class="active-logo"
+                        src="./asseets/img/img/activity.png"
+                        alt=""
+                    />
                     <div class="home-what-content">
                         <section class="home-what-item01">
                             <div class="ttlarea-ctr">
@@ -486,13 +565,13 @@
                                     <span>01</span>
                                 </span>
                                 <h3 class="home-what-ttl">
-                                    <span>個別就労支援</span>
+                                    <span>ウリ学生探し</span>
                                 </h3>
                             </div>
                             <div class="txtarea">
                                 <div class="flex-mgn-btm48">
-                                    <img
-                                        src="./main_img.jpg"
+                                    <img class="active-illust"
+                                        src="asseets/img/img/active-イラスト.png"
                                         alt="Lighthouse Recorder"
                                         width="346"
                                         height="217"
@@ -500,21 +579,7 @@
                                 </div>
                                 <div class="home-what-txt">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Iusto inventore
-                                        eligendi at, beatae tempora recusandae
-                                        sint veniam? Nulla dolore, culpa quaerat
-                                        consectetur voluptatem voluptas. Aperiam
-                                        expedita impedit porro distinctio iusto?
-                                        <span class="bold">
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Odio
-                                            quae ipsam, et maxime officia illum
-                                            aspernatur architecto repellendus
-                                            quibusdam consequuntur cumque soluta
-                                            ipsum praesentium esse culpa quo
-                                            fugit illo suscipit.
-                                        </span>
+                                        大学内でのビラ配りや友だちづて、大学の先生に協力いただいて授業内でアンケートを行って学生たちを探しています。近年では、友達づてに参加する学生も多く、同じルーツを持った学生たちの輪が広がっています。
                                     </p>
                                 </div>
                             </div>
@@ -532,32 +597,22 @@
                         <section class="home-what-item02">
                             <div class="ttlarea-ctr02">
                                 <span class="home-what-num02">02</span>
-                                <h3 class="home-what-ttl">居場所支援</h3>
+                                <h3 class="home-what-ttl">
+                                    イベント
+                                </h3>
                             </div>
                             <div class="txtarea">
                                 <div class="flex-mgn-btm48">
                                     <img
-                                        src="./main_img.jpg"
+                                    class="active-illust"
+                                        src="./asseets/img/img/active-イラスト02.png"
                                         alt="居場所支援"
                                         width="323"
                                         height="184"
                                     />
                                 </div>
                                 <div class="home-what-txt">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Cupiditate autem ipsa
-                                    exercitationem similique minima adipisci qui
-                                    ullam rerum dolor corporis, quos ad modi,
-                                    eius magnam distinctio quam. Soluta, veniam
-                                    distinctio?
-                                    <span class="bold"
-                                        >Lorem, ipsum dolor sit amet consectetur
-                                        adipisicing elit. Mollitia, ipsam quas,
-                                        eaque facere blanditiis sint alias nemo
-                                        totam nulla officia vitae qui voluptatum
-                                        temporibus, et architecto accusantium
-                                        tempora molestias ullam!</span
-                                    >
+                                    年間を通して新入生歓迎会、夏のキャンプ、忘年会、成人式など数々の行事を行っています。大きな行事だけではなく、大学で集まってランチ会をしたり夜に飲み会をしたりもしています。
                                 </div>
                             </div>
                             <div class="home-what-btnbox">
@@ -573,12 +628,12 @@
                         <section class="home-what-item03">
                             <div class="ttlarea-ctr03">
                                 <span class="home-what-num03">03</span>
-                                <h3 class="home-what-ttl">キャリア教育</h3>
+                                <h3 class="home-what-ttl">学習会</h3>
                             </div>
                             <div class="txtarea">
                                 <div class="flex-mgn-btm48">
-                                    <img
-                                        src="./main_img.jpg"
+                                    <img class="active-illust"
+                                        src="./asseets/img/img/active-イラスト03.png"
                                         alt="キャリア教育"
                                         width="346"
                                         height="217"
@@ -586,13 +641,10 @@
                                 </div>
                                 <div class="home-txt">
                                     <span class="bold"
-                                        >Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Voluptates deserunt
-                                        quaerat vero deleniti, excepturi
-                                        repellendus a facilis maiores autem sed
-                                        omnis cumque, voluptatibus cum
-                                        perferendis impedit id earum ipsa
-                                        nostrum!
+                                        >自身のルーツを知る上で、学習会は欠かせない要素です。
+                                        主に、歴史・言語についての学習会を行っております。
+                                        歴史学習会では朝鮮史や日本史、世界史のみならず、ジェンダーや哲学など幅広い分野の学びを行っています。言語学習会では、自身のルーツである朝鮮語をみんなで学んでいます。
+                                        
                                     </span>
                                 </div>
                             </div>
@@ -632,7 +684,9 @@
                                 href="https://example.com/news1"
                             >
                                 <img
-                                    src="./main_img.jpg"
+                                    class="article-list-img"
+                                    id="article-list-img01"
+                                    src="./asseets/img/img/news02.jpg"
                                     alt="プレリリース画像"
                                 />
                             </a>
@@ -641,20 +695,17 @@
                                 <div class="txt-tab">
                                     <a
                                         class="txt-link"
-                                        href="https://example.com/category/pr"
-                                        >プレリリース</a
+                                        href="https://ameblo.jp/rht-nishitokyo0914/entry-12667947278.html"
+                                        >お知らせ</a
                                     >
-                                    <time datetime="2025-02-25"
-                                        >2025.02.25</time
-                                    >
+                                    <time datetime="2025-02-25">2021.4.11</time>
                                 </div>
                                 <a
                                     class="txt-a"
-                                    href="https://example.com/news1"
+                                    href="https://ameblo.jp/rht-nishitokyo0914/entry-12667947278.html"
                                 >
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Non quo deleniti earum
-                                    iusto,
+                                    【謹賀新年 &
+                                    祝成人！！！】史上初のオンラインも活用する形で成人式＆新年会が開催されました。
                                 </a>
                             </div>
                         </article>
@@ -662,16 +713,20 @@
                         <article class="article-list">
                             <a
                                 class="article-list-a"
-                                href="https://example.com/news2"
+                                href="https://ameblo.jp/rht-nishitokyo0914/entry-12562667134.html"
                             >
-                                <img src="./main_img.jpg" alt="お知らせ画像" />
+                                <img
+                                    class="article-list-img"
+                                    src="./asseets/img/img/news2-2.jpg"
+                                    alt="お知らせ画像"
+                                />
                             </a>
                             <div class="txt">
                                 <div class="txt-tab">
                                     <a
                                         class="txt-link"
-                                        href="https://example.com/category/info"
-                                        >お知らせ</a
+                                        href="https://ameblo.jp/rht-nishitokyo0914/entry-12562667134.html"
+                                        >イベント</a
                                     >
                                     <time datetime="2025-02-25"
                                         >2025.02.25</time
@@ -679,11 +734,9 @@
                                 </div>
                                 <a
                                     class="txt-a"
-                                    href="https://example.com/news2"
+                                    href="https://ameblo.jp/rht-nishitokyo0914/entry-12562667134.html"
                                 >
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quod atque hic inventore
-                                    sed molestiae officia illum
+                                    【学術研】全国の留学同皆で在日コリアン学生学術研究討論会というイベントに参加してきました。
                                 </a>
                             </div>
                         </article>
@@ -693,10 +746,10 @@
                         <article class="article-list">
                             <a
                                 class="article-list-a"
-                                href="https://example.com/news3"
+                                href="https://ameblo.jp/rht-nishitokyo0914/entry-12489623022.html?frm=theme"
                             >
                                 <img
-                                    src="./main_img.jpg"
+                                    src="./asseets/img/img/news04.jpg"
                                     alt="プレリリース画像"
                                 />
                             </a>
@@ -704,20 +757,18 @@
                                 <div class="txt-tab">
                                     <a
                                         class="txt-link"
-                                        href="https://example.com/category/pr"
-                                        >プレリリース</a
+                                        href="https://ameblo.jp/rht-nishitokyo0914/entry-12489623022.html?frm=theme"
+                                        >勉強会</a
                                     >
                                     <time datetime="2025-03-01"
-                                        >2025.03.01</time
+                                        >2019.07.03</time
                                     >
                                 </div>
                                 <a
                                     class="txt-a"
-                                    href="https://example.com/news3"
+                                    href="https://ameblo.jp/rht-nishitokyo0914/entry-12489623022.html?frm=theme"
                                 >
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Non quo deleniti earum
-                                    iusto,
+                                    「私たちとはどのような存在か～在日朝鮮人の歴史と今」というテーマで学習会をやりました。
                                 </a>
                             </div>
                         </article>
@@ -725,28 +776,29 @@
                         <article class="article-list">
                             <a
                                 class="article-list-a"
-                                href="https://example.com/news4"
+                                href="https://ameblo.jp/rht-nishitokyo0914/entry-12501815322.html?frm=theme"
                             >
-                                <img src="./main_img.jpg" alt="お知らせ画像" />
+                                <img
+                                    src="./asseets/img/img/news03.jpg"
+                                    alt="お知らせ画像"
+                                />
                             </a>
                             <div class="txt">
                                 <div class="txt-tab">
                                     <a
                                         class="txt-link"
-                                        href="https://example.com/category/info"
+                                        href="https://ameblo.jp/rht-nishitokyo0914/entry-12501815322.html?frm=theme"
                                         >お知らせ</a
                                     >
                                     <time datetime="2025-03-01"
-                                        >2025.03.01</time
+                                        >2019.08.15</time
                                     >
                                 </div>
                                 <a
                                     class="txt-a"
-                                    href="https://example.com/news4"
+                                    href="https://ameblo.jp/rht-nishitokyo0914/entry-12501815322.html?frm=theme"
                                 >
-                                    Lorem ipsum dolor sit amet consectetur,
-                                    adipisicing elit. Quod atque hic inventore
-                                    sed molestiae officia illum
+                                    西東京留学同初となるプレマダンが開催！西東京地域唯一のビーチでバーべキューやバレーも⁉
                                 </a>
                             </div>
                         </article>
@@ -774,13 +826,13 @@
                                 <p class="event-date-year">2025</p>
                                 <p class="event-date-date">
                                     <span class="event-date-date01"
-                                        >1/1
-                                        <span class="day-typesquare">(水)</span>
+                                        >3/8
+                                        <span class="day-typesquare">(土)</span>
                                     </span>
-                                    <span class="event-date-date02"
-                                        >-12/31
-                                        <span class="day-typesquare">(水)</span>
-                                    </span>
+                                    <!-- <span class="event-date-date02"
+                                        >
+                                        <span class="day-typesquare"></span>
+                                    </span> -->
                                 </p>
                             </div>
                             <!-- event date -->
@@ -788,7 +840,7 @@
                                 <a class="event-img-a" href="">
                                     <img
                                         class="event-img-img"
-                                        src="./main_img.jpg"
+                                        src="./asseets/img/img/event01.jpg"
                                         alt=""
                                     />
                                 </a>
@@ -797,16 +849,16 @@
                             <div class="event-txt">
                                 <p class="pickup">PICK UP</p>
                                 <p class="category">
-                                    <a class="category-a" href=""
-                                        >ハングル勉強会</a
-                                    >
+                                    <a class="category-a" href="">公演</a>
                                 </p>
                                 <p class="tag">
                                     <a class="tag-a" href="">#一般向け</a>
                                 </p>
                                 <br />
                                 <a class="event-txt-main" href="">
-                                    【定期開催】ハングルを仲間と一緒に学べるハングル勉強会
+                                    留学同神奈川公演「불씨」（プルシ）
+                                    <br />チケット：一般1000円/高校生以下無料
+                                    演目：演劇やサムルノリなど
                                 </a>
                             </div>
                             <!-- txt -->
@@ -816,35 +868,37 @@
                                 <p class="event-date-year">2025</p>
                                 <p class="event-date-date">
                                     <span class="event-date-date01"
-                                        >1/1
-                                        <span class="day-typesquare">(水)</span>
+                                        >3/15
+                                        <span class="day-typesquare">(土)</span>
                                     </span>
-                                    <span class="event-date-date02"
+                                    <!-- <span class="event-date-date02"
                                         >-12/31
                                         <span class="day-typesquare">(水)</span>
-                                    </span>
+                                    </span> -->
                                 </p>
                             </div>
                             <!-- event date -->
                             <div class="event-img">
                                 <a href="">
-                                    <img src="./main_img.jpg" alt="" />
+                                    <img
+                                        src="./asseets/img/img/event02.jpg"
+                                        alt=""
+                                    />
                                 </a>
                             </div>
                             <!-- img -->
                             <div class="event-txt">
                                 <p class="pickup">PICK UP</p>
                                 <p class="category">
-                                    <a class="category-a" href=""
-                                        >ハングル勉強会</a
-                                    >
+                                    <a class="category-a" href="">歓送会</a>
                                 </p>
-                                <p class="tag">
+                                <!-- <p class="tag">
                                     <a class="tag-a" href="">#一般向け</a>
-                                </p>
+                                </p> -->
                                 <br />
                                 <a class="event-txt-main" href="">
-                                    【定期開催】ハングルを仲間と一緒に学べるハングル勉強会
+                                    卒業生の最後となる行事が開催されます！
+                                    <br />1部:総大会 / 2部:卒業生歓送会
                                 </a>
                             </div>
                             <!-- txt -->
@@ -854,35 +908,39 @@
                                 <p class="event-date-year">2025</p>
                                 <p class="event-date-date">
                                     <span class="event-date-date01"
-                                        >1/1
-                                        <span class="day-typesquare">(水)</span>
+                                        >3/23
+                                        <span class="day-typesquare">(土)</span>
                                     </span>
-                                    <span class="event-date-date02"
+                                    <!-- <span class="event-date-date02"
                                         >-12/31
                                         <span class="day-typesquare">(水)</span>
-                                    </span>
+                                    </span> -->
                                 </p>
                             </div>
                             <!-- event date -->
                             <div class="event-img">
                                 <a href="">
-                                    <img src="./main_img.jpg" alt="" />
+                                    <img
+                                        src="./asseets/img/img/event03.jpg"
+                                        alt=""
+                                    />
                                 </a>
                             </div>
                             <!-- img -->
                             <div class="event-txt">
                                 <p class="pickup">PICK UP</p>
                                 <p class="category">
-                                    <a class="category-a" href=""
-                                        >ハングル勉強会</a
-                                    >
+                                    <a class="category-a" href="">記念公演</a>
                                 </p>
                                 <p class="tag">
                                     <a class="tag-a" href="">#一般向け</a>
                                 </p>
                                 <br />
                                 <a class="event-txt-main" href="">
-                                    【定期開催】ハングルを仲間と一緒に学べるハングル勉強会
+                                    【80周年記念】留学同東京結成80周年記念
+                                    総合文化公演《자욱》（チャウク）
+                                    <br />○日時:13時半開場、14時開演（16時半終了予定）○会場:星陵会館
+                                    ホール
                                 </a>
                             </div>
                             <!-- txt -->
@@ -890,35 +948,33 @@
                     </div>
                 </div>
             </section6>
-            
+
             <section8 id="mv">
                 <div class="mv-us">
                     <div class="concept" movie>
                         <p class="mv-ttl">
                             <span class="mv-en">
-                                <img id="movie-img"
-                                    src="./asseets/img/img/txt_movie.svg"
+                                <img
+                                    id="movie-img"
+                                    src="./asseets/svg/txt_movie.svg"
                                     alt="Movie"
                                 />
-                                <span class="mv-sub">
-                                    <img id="about-img"
-                                        src="./asseets/img/img/txt_about.svg"
-                                        alt="about"
-                                    />
-                                    RYUHAKDON
-                                </span>
                             </span>
                             <span class="ja-typesquare-option">
                                 動画を見るリュハットン西東京
                             </span>
                         </p>
                         <p class="comment">Play Movie</p>
-                        <a href="#" id="btn-play">
-                            <img id="btn-img" src="./main_img.jpg" alt="" />
+                        <a href="https://youtu.be/wWh5JxRf650" id="btn-play">
+                            <img
+                                id="btn-img"
+                                src="./asseets/img/img/movie-main.jpg"
+                                alt=""
+                            />
                             <span class="time-mv">2:51</span>
                         </a>
                     </div>
-                    <div id="model movie">
+                    <!-- <div id="model-movie">
                         <div class="movie"></div>
                         <a href="#" class="close">
                             <span class="ico">
@@ -928,8 +984,7 @@
                             Close
                         </a>
                         <div class="layer"></div>
-
-                    </div>
+                    </div> -->
                 </div>
             </section8>
 
@@ -952,41 +1007,41 @@
                         <ul class="sns-content-list">
                             <li class="sns-content-inside">
                                 <a
-                                    href=""
+                                    href="https://www.facebook.com/share/1XpLwkHEA5/?mibextid=wwXIfr"
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="fb"
+                                    class="sns-link-detail-bottom"
+                                    id="facebook"
                                     >Facebook</a
                                 >
                             </li>
                             <li class="sns-content-inside">
                                 <a
-                                    href=""
+                                    href="https://www.instagram.com/rht_nishitokyo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="ist"
+                                    class="sns-link-detail-bottom"
+                                    id="instagram"
                                     >Instagram</a
                                 >
                             </li>
                             <li class="sns-content-inside">
                                 <a
-                                    href=""
+                                    href="https://x.com/rhtnishitokyo"
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="x"
+                                    class="sns-link-detail-bottom"
+                                    id="X"
                                     >X</a
                                 >
                             </li>
                             <li class="sns-content-inside">
                                 <a
-                                    href=""
+                                    href="https://www.ameba.jp/profile/general/rht-nishitokyo0914/"
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="amb"
+                                    class="sns-link-detail-bottom"
+                                    id="ameba"
                                     >Ameba blog</a
                                 >
                             </li>
@@ -995,8 +1050,8 @@
                                     href=""
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="ytb"
+                                    class="sns-link-detail-bottom"
+                                    id="youtube"
                                     >youtube</a
                                 >
                             </li>
@@ -1005,8 +1060,8 @@
                                     href=""
                                     target="_blank"
                                     rel="noopener"
-                                    class="sns-link-detail"
-                                    id="mail"
+                                    class="sns-link-detail-bottom"
+                                    id="Mail"
                                     >Mail</a
                                 >
                             </li>
@@ -1014,7 +1069,6 @@
                     </div>
                 </div>
             </section7>
-
 
             <section9 id="contact">
                 <div class="contact-us"></div>
@@ -1025,31 +1079,31 @@
 
         <footer id="footer">
             <section class="primary">
-                <p class="logo"><a href="#">COMPANY</a></p>
-                <p class="address">
-                    〒100-0005 東京都千代田区丸の内１丁目<br />
-                    TEL : 123-456-9999　/　FAX : 123-456-0000
+                <p class="logo"><a href="#"></a></p>
+                <p class="address">在日朝鮮人留学生同盟  西東京支部
+                    〒196-0033　東京都昭島市東町2丁目4-12 西東京朝鮮会館<br />
+                    TEL : 080-9888-0628　/　FAX : 080-9888-0628
                 </p>
                 <div class="navi-row">
                     <ul class="navi">
-                        <li><a href="#">ホーム</a></li>
-                        <li><a href="#">選ばれる理由</a></li>
-                        <li><a href="#">サービス</a></li>
-                        <li><a href="#">制作事例</a></li>
-                        <li><a href="#">会社案内</a></li>
+                        <li><a href="#">留学同西東京について</a></li>
+                        <li><a href="#">団体概要</a></li>
+                        <li><a href="#">沿革</a></li>
+                        <li><a href="#">活動内容</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
                     </ul>
                     <ul class="sns-navi">
                         <li>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://x.com/rhtnishitokyo"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/rht_nishitokyo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/share/1XpLwkHEA5/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -1060,7 +1114,7 @@
                     <li><a href="#">プライバシーポリシー</a></li>
                 </ul>
                 <p class="copyright">
-                    Copyright WEBSITE,Inc. All rights reserved.
+                    RYUHAKDON Nishitokyo
                 </p>
             </section>
         </footer>
