@@ -1,0 +1,52 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // User profiles:
+    // Users can read any profile (e.g., for timeline display names/icons)
+    // Users can only create/update their own profile document
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Daily logs:
+    // Document ID is structured as {userId}_{YYYYMMDD}
+    // Users can read any daily log (e.g., for aggregated stats if ever needed, though current queries are user-specific)
+    // Users can only write to their own daily logs
+    // This rule assumes dailyLogs are a top-level collection.
+    // If dailyLogs are a subcollection under /users/{userId}/dailyLogs, the path would be:
+    // match /users/{userId}/dailyLogs/{dailyLogId} {
+    //   allow read: if request.auth != null;
+    //   allow write: if request.auth != null && request.auth.uid == userId;
+    // }
+    // Based on useLogs.ts, dailyLogs are a subcollection. The rule below reflects that.
+    match /users/{userId}/dailyLogs/{dailyLogDocId} { // dailyLogDocId here is the {YYYYMMDD} part or specific ID
+      allow read: if request.auth != null;
+      // Write allowed if the user is trying to write to their own subcollection.
+      // The dailyLogDocId itself doesn't contain the userId for split.
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Timeline posts:
+    // Users can read all timeline posts
+    // Users can create posts for themselves
+    // Users can only update/delete their own posts
+    match /timeline/{postId} { // Corrected path from timelinePosts to timeline as per useLogs.ts
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+
+    // Reactions to timeline posts:
+    // Users can read all reactions
+    // Users can create reactions for themselves (fromUserId must match auth uid)
+    // Reactions are typically not updated; delete and recreate if needed, or add specific update rules.
+    match /timeline/{postId}/reactions/{reactionId} { // Corrected path from timelinePosts to timeline
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.resource.data.fromUserId == request.auth.uid;
+      // allow delete: if request.auth != null && resource.data.fromUserId == request.auth.uid; // Optional
+    }
+  }
+}
